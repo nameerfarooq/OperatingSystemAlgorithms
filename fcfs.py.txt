@@ -1,15 +1,15 @@
-#NumOfProcess = int(input("enter number of processes to be calculated", ))
-NumOfProcess = 3
-listofprocess = [['p1', 24, 0], ['p2', 3, 0], ['p3', 3, 0]]
+NumOfProcess = int(input("enter number of processes to be calculated", ))
+
+listofprocess = []
 CpuTime = 0
-#for i in range(NumOfProcess):
- #   print("enter ", i+1," process details !")
-  #  processName = input("enter process Name")
-   # BurstTime = input("enter  process Burst time")
-    #ArrivalTime = input("enter  process Arrival time")
-    #print("-------------------------------------")
-    #process = [processName, BurstTime, ArrivalTime]
-    #listofprocess.append(process)
+for i in range(NumOfProcess):
+    print("enter ", i+1," process details !")
+    processName = input("enter process Name")
+    BurstTime = int(input("enter  process Burst time"))
+    ArrivalTime = int(input("enter  process Arrival time"))
+    print("-------------------------------------")
+    process = [processName, BurstTime, ArrivalTime]
+    listofprocess.append(process)
 #sorting
 for j in reversed(range(NumOfProcess-1)):
     if listofprocess[j][2]>listofprocess[j-1][2]:
